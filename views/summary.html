@@ -1,0 +1,61 @@
+<!--    /**
+          *  Dating Site Assignment
+          *  Author: Zane Stearman
+          *  Date:   04/19/2019
+          */-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Summary</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+<div class="jumbotron text-center datenight">
+    <h1>=^o.o^=Date-Night~~</h1>
+    <h2> -Profile Summary-</h2>
+</div>
+
+<div class="container" id="columns">
+    <div class="row" id="greeting">
+        <div class="col-sm-16">
+            <ul class="list-group">
+            <li class="list-group-item">Name: {{ @SESSION.member->getFname() }} {{ @SESSION.member->getLname() }}</li>
+            <li class="list-group-item">Gender: {{ @SESSION.member->getGender() }}</li>
+            <li class="list-group-item">Age: {{ @SESSION.member->getAge() }}</li>
+            <li class="list-group-item">Phone: {{ @SESSION.member->getPhone() }}</li>
+            <li class="list-group-item">Email: {{ @SESSION.member->getEmail() }}</li>
+            <li class="list-group-item">State: {{ @SESSION.member->getState() }}</li>
+            <li class="list-group-item">Seeking: {{ @SESSION.member->getSeeking() }}</li>
+            <li class="list-group-item">Interests: {{ @SESSION.interests }}</li>
+            </ul>
+        </div>
+    </div>
+<!--second row-->
+    <div class="row">
+        <div class="col-sm-16" id="profpic">
+            <img src="https://www.mercurynews.com/wp-content/uploads/2018/01/thinkstockphotos-640140946.jpg?w=525" alt="handsome cat">
+        </div>
+        <div class="col-sm-16" >
+            <h3>Biography:</h3>
+            {{ @SESSION.member->getBio() }}
+        </div>
+    </div>
+    <div class="contact" >
+        <a href="contact"><button href="contact" type="submit" id="button-style" class="btn btn-primary btn-lg" value="Join the fun!">
+            Contact Me</button></a>
+    </div>
+</div>
+
+<!--<footer>-->
+<!--    <h4 class="text-muted"><p>Date-Night &copy; 2019</h4>-->
+<!--    <p>by: Zane Stearman</p><br>-->
+<!--</footer>-->
+</body>
+</html>

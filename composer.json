@@ -1,0 +1,15 @@
+{
+  "name" : "ztsgreen/328/dating4",
+  "authors": [
+    {
+      "name" : "Zane Stearman",
+      "email" : "zstearman@mail.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core" : "dev-master"
+  },
+  "autoload": {
+    "classmap": ["classes/"]
+  }
+}

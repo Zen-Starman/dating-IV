@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Personal Information</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+<body>
+
+<div class="jumbotron text-center datenight">
+    <!--    <div class=" overlay-mf">-->
+    <h1>=^o.o^=Date-Night~~</h1>
+    <h2> -Personal Information-</h2>
+    <!--    </div>-->
+</div>
+
+<div class="container" id="columns">
+    <div id="greeting">
+        <div action="#" method="post" role="form">
+            <form action="#" method="post" >
+                <h3>Personal Information!</h3>
+                <div id="errormessage"></div>
+                <!--First Name-->
+                <div class="col-sm-12 mb-3">
+                    <div class="form-group">
+                        <check if="{{ @errors['f_name'] }}">
+                            <span class="err">{{ @errors['f_name'] }}</span>
+                        </check>
+                        <input type="text" value="{{ @f_name }}"
+                               name="f_name" class="form-control" id="f_name" placeholder="First Name"
+                               data-rule="minlen:4" data-msg="Please enter at least 4 chars"
+                        >
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <!--Last Name-->
+                <div class="col-sm-12 mb-3">
+                    <div class="form-group">
+                        <check if="{{ @errors['l_name'] }}">
+                            <span class="err">{{ @errors['l_name'] }}</span>
+                        </check>
+                        <input type="text" value="{{ @l_name }}"
+                               name="l_name" class="form-control" id="l_name" placeholder="Last Name"
+                               data-rule="minlen:4" data-msg="Please enter at least 4 chars"
+                        >
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <!--Age-->
+                <div class="col-sm-12 mb-3">
+                    <div class="form-group">
+                        <check if="{{ @errors['age'] }}">
+                            <span class="err">{{ @errors['age'] }}</span>
+                        </check>
+                        <input type="number" value="{{ @age }}"
+                               data-rule="minlen:4" data-msg="Please enter your age."
+                               name="age" class="form-control" id="age" placeholder="20"
+                        >
+                        <div class="validation"></div>
+                    </div>
+                </div>
+                <!--Gender-->
+                <div class="col-sm-12 mb-3">
+                    <strong>Gender</strong>
+                    <br>
+
+                    <div class="input-group">
+
+                        <check if="{{ @errors['gender'] }}">
+                            <span class="err">{{ @errors['@gender'] }}</span>
+                        </check>
+
+                        <label>
+                            <input name="gender" value="male" type="radio"
+                            <check if="{{ @gender == male }}">
+                                checked="checked"
+                            </check>
+                            > male </label>
+                        <label>
+                            <input name="gender" value="female" type="radio"
+                            <check if="{{ @gender == female }}">
+                                checked="checked"
+                            </check>
+                            > female </label>
+                    </div>
+                </div>
+                <div class="col-sm-12 mb-3">
+                    <div class="form-group">
+                        <check if="{{ @errors['phone'] }}">
+                            <span class="err">{{ @errors['@phone'] }}</span>
+                        </check>
+                        <input type="tel" value="{{ @phone }}" class="form-control" name="phone"
+                               id="phone" placeholder="(000)000-0000" data-rule="minlen:4"
+                               data-msg="Please enter a 10 digit number"
+                        >
+                        <div class="validation"></div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 mb-3">
+                    <strong>Premium Membership</strong>
+                    <br>
+
+                    <div class="input-group">
+
+                        <check if="{{ @errors['premium'] }}">
+                            <span class="err">{{ @errors['@premium'] }}</span>
+                        </check>
+
+                        <label>
+                            <input name="premium" value="premium" type="checkbox"
+                            <check if="{{ isset($_POST['premium']) }}">
+                                checked="checked"
+                            </check>
+                            > Sign me up for a Premium Account!</label>
+
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+    <div class="right">
+        <div  id="greeting" class="col-sm-10 mb-8">
+            <div class="title-box-2 pt-4 pt-md-0">
+                <h5>
+                    Privacy Policy
+                </h5>
+            </div>
+            <p class="lead">
+                All of your information is confidential. Please see our <a>Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+
+
+
+    <button type="submit" id="button-style" class="btn btn-primary btn-md">Next></button>
+
+    </form>
+</div>
+
+<footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</footer>
+
+</body>
+</html>

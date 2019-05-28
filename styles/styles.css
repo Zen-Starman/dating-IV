@@ -1,0 +1,79 @@
+/**
+ *  Dating Site Assignment
+ *  Author: Zane Stearman
+ *  Date:   04/14/2019
+ */
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 98vh;
+    /*width: 98vw;*/
+    background-image: url("../images/catnip.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #817f9a;
+}
+.intro{
+    text-align: justify;
+}
+.datenight {
+    margin: auto;
+    text-shadow: 0 0 5px darkgoldenrod;
+    padding: 2em;
+    height: 20vh;
+    opacity: .9;
+    background-color: #817f9a;
+    border-radius: 5px;
+}
+.container{
+    width: 90vw;
+    height: 65vh;
+    margin-top:30px;
+}
+img{
+    margin: 1em;
+    width: 50vw;
+    border-radius: 5px;
+}
+footer{
+    clear: both;
+    text-align: center;
+    opacity: .9;
+    background-color: #817f9a;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-shadow: 0 0 5px darkgoldenrod;
+
+}
+#greeting {
+    width: 40vw;
+    background: goldenrod;
+    opacity: .9;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid gray;
+    float: left;
+}
+#columns{
+    background: goldenrod;
+    opacity: .9;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+button{
+    float: right;
+    clear: both;
+}
+textarea{
+    padding: 5%;
+    float: right;
+}
